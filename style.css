@@ -1,0 +1,76 @@
+/* Animação do fundo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #7B2CBF, #5A1BD6, #3A86FF, #8338EC);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Tela inicial */
+.intro-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Logo na tela inicial */
+.logo {
+    width: 250px; /* Ajustado para ficar proporcional ao texto 90px */
+    height: auto;
+}
+
+/* Botão interativo */
+.btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fed225;
+    color: #240563;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #5a1bdc;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Esconde o conteúdo principal inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Cabeçalho com a logo */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo no cabeçalho */
+.logo-header {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logo-header:hover {
+    transform: scale(1.1);
+}
